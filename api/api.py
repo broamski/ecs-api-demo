@@ -14,7 +14,7 @@ def status():
     print vars(request)
     return jsonify(status="OKAY", requestor_ip=request.remote_addr,
                    user_agent=request.headers.get('User-Agent', 'none'),
-                   timestamp=datetime.datetime.utcnow(), api_version="1.0")
+                   timestamp=datetime.datetime.utcnow(), api_version="1.1")
 
 
 @app.route("/incrementer")
